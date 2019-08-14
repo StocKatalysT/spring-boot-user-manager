@@ -4,7 +4,6 @@ import be.jimve.beans.UserEntity;
 import be.jimve.repositories.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
-import javax.inject.Inject;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,7 +12,6 @@ import java.util.Optional;
 public class UserRESTController {
     private final UserRepository userRepository;
 
-    @Inject
     public UserRESTController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }

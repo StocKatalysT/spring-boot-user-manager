@@ -18,11 +18,4 @@
         <module>springboot-library-impl</module>
         <module>springboot-webservices</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-        </dependency>
-    </dependencies>
 </project>
