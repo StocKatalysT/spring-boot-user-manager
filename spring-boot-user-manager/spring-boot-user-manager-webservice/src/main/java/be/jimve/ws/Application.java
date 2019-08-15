@@ -2,6 +2,8 @@ package be.jimve.ws;
 
 import be.jimve.beans.UserEntity;
 import be.jimve.repositories.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +19,8 @@ import java.util.stream.Stream;
 @EnableJpaRepositories("be.jimve.repositories")
 @EntityScan("be.jimve.beans")
 public class Application extends SpringBootServletInitializer {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
@@ -24,11 +28,12 @@ public class Application extends SpringBootServletInitializer {
     @Bean
     CommandLineRunner init(UserRepository userRepository) {
         return args -> {
-            Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
+            Stream.of("Jim", "Benjamin", "Maxime").forEach(name -> {
                 UserEntity user = new UserEntity(name, name.toLowerCase() + "@domain.com");
                 userRepository.save(user);
             });
-            userRepository.findAll().forEach(System.out::println);
+            LOGGER.info("Populated database with :");
+            userRepository.findAll().forEach(user -> LOGGER.info("{}", user));
         };
     }
 

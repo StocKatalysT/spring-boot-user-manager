@@ -5,17 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>be.jimve.springpoc</groupId>
+        <groupId>be.jimve.spring-boot-user-manager</groupId>
         <artifactId>parent-pom</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>springboot</artifactId>
+    <artifactId>spring-boot-user-manager</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>springboot-library-core</module>
-        <module>springboot-library-impl</module>
-        <module>springboot-webservices</module>
+        <module>spring-boot-user-manager-core</module>
+        <module>spring-boot-user-manager-impl</module>
+        <module>spring-boot-user-manager-webservice</module>
     </modules>
 </project>
