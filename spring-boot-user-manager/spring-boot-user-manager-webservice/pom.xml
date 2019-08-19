@@ -19,7 +19,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>be.jimve.ws.Application</mainClass>
+                    <mainClass>be.jimve.springbootusermanager.ws.Application</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -61,14 +61,13 @@
         </dependency>
 
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
             <groupId>be.jimve.spring-boot-user-manager</groupId>
-            <artifactId>spring-boot-user-manager-impl</artifactId>
+            <artifactId>spring-boot-user-manager-library</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

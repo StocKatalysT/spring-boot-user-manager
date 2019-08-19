@@ -1,7 +1,7 @@
-package be.jimve.ws;
+package be.jimve.springbootusermanager.ws;
 
-import be.jimve.beans.UserEntity;
-import be.jimve.repositories.UserRepository;
+import be.jimve.springbootusermanager.beans.User;
+import be.jimve.springbootusermanager.repositories.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,22 +17,24 @@ public class UserRESTController {
     }
 
     @GetMapping("/users")
-    public List<UserEntity> getUsers() {
-        return (List<UserEntity>) userRepository.findAll();
+    public List<User> getUsers() {
+        return (List<User>) userRepository.findAll();
     }
 
     @PostMapping("/user")
-    void addUser(@RequestBody UserEntity user) {
+    void addUser(@RequestBody User user) {
         userRepository.save(user);
     }
 
     @PutMapping("/user")
-    void updateUser(@RequestBody UserEntity userParameter) {
-        Optional<UserEntity> userById = userRepository.findById(userParameter.getId());
+    void updateUser(@RequestBody User userParameter) {
+        Optional<User> userById = userRepository.findById(userParameter.getId());
         if(userById.isPresent()) {
-            UserEntity user = userById.get();
+            User user = userById.get();
             user.setName(userParameter.getName());
-            user.setEmail(userParameter.getEmail());
+            user.setFirstName(userParameter.getFirstName());
+            user.setUsername(userParameter.getUsername());
+            user.setPassword(userParameter.getPassword());
         } else {
             throw new IllegalArgumentException("User not found");
         }
@@ -41,5 +43,10 @@ public class UserRESTController {
     @DeleteMapping("/{id}")
     void deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
+    }
+
+    @GetMapping("/search")
+    List<String> getUsernamesLike(@RequestParam String username) {
+        return userRepository.getUsernamesLike(username);
     }
 }

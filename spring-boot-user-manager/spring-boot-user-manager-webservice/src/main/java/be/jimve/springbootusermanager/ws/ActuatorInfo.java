@@ -1,4 +1,4 @@
-package be.jimve.ws;
+package be.jimve.springbootusermanager.ws;
 
 import org.springframework.boot.actuate.info.Info;
 import org.springframework.boot.actuate.info.InfoContributor;

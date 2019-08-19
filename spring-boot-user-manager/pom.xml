@@ -14,8 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-boot-user-manager-core</module>
-        <module>spring-boot-user-manager-impl</module>
+        <module>spring-boot-user-manager-library</module>
         <module>spring-boot-user-manager-webservice</module>
     </modules>
 </project>
