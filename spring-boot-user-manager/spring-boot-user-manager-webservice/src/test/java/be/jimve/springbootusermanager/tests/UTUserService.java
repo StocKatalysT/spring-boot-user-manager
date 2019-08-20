@@ -13,9 +13,14 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * This test is an example of how you can use a Service running within a Spring Boot application. However, performances
+ * are not good at all for unit testing and should only be used when needed. We need it to test the data access, and that is why we use a
+ * H2 in-memory database configured in the application.properties file located in test/resources.
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
-public class UTRestController {
+public class UTUserService {
     @Autowired
     private UserService userService;
 
