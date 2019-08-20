@@ -1,33 +1,32 @@
-package be.jimve.springbootusermanager.ws;
+package be.jimve.springbootusermanager.services;
 
 import be.jimve.springbootusermanager.beans.User;
 import be.jimve.springbootusermanager.repositories.UserRepository;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@RestController
-@CrossOrigin(origins = "http://localhost:4200") // Allows request coming from the Angular Web Application
-public class UserRESTController {
+@Service
+public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
-    public UserRESTController(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    @GetMapping("/users")
+    @Override
     public List<User> getUsers() {
-        return (List<User>) userRepository.findAll();
+        return userRepository.findAll();
     }
 
-    @PostMapping("/user")
-    void addUser(@RequestBody User user) {
+    @Override
+    public void addUser(User user) {
         userRepository.save(user);
     }
 
-    @PutMapping("/user")
-    void updateUser(@RequestBody User userParameter) {
+    @Override
+    public void updateUser(User userParameter) {
         Optional<User> userById = userRepository.findById(userParameter.getId());
         if(userById.isPresent()) {
             User user = userById.get();
@@ -40,13 +39,13 @@ public class UserRESTController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    void deleteUser(@PathVariable Long id) {
+    @Override
+    public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
 
-    @GetMapping("/search")
-    List<String> getUsernamesLike(@RequestParam String username) {
+    @Override
+    public List<String> getUsernamesLike(String username) {
         return userRepository.getUsernamesLike(username);
     }
 }
