@@ -37,7 +37,7 @@ public class UTUserService {
     @Test
     public void getUsernamesLike() {
         userService.addUser(new User("Premier", "Test", "test1", "T35T"));
-        userService.addUser(new User("Deuxième", "Test", "test2", "T35T"));
+        userService.addUser(new User("DeuxiÃ¨me", "Test", "test2", "T35T"));
         List<String> foundUsernames = userService.getUsernamesLike("Test");
         assertEquals(2, foundUsernames.size());
         List<User> foundUsers = userService.getUsers();

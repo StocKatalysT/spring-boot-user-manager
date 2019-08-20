@@ -12,6 +12,7 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
     private EntityManager entityManager;
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<String> getUsernamesLike(String username) {
         username = '%' + username.toLowerCase() + '%';
         String query = "SELECT u.username FROM users u WHERE LOWER(u.username) LIKE ?";

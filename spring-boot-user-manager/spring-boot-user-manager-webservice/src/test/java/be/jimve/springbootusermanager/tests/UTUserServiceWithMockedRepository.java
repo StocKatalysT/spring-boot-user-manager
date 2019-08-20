@@ -48,7 +48,7 @@ public class UTUserServiceWithMockedRepository {
     @Test
     public void getUsernamesLike() {
         User user1 = new User("Premier", "Test", "test1", "T35T");
-        User user2 = new User("Deuxième", "Test", "test2", "T35T");
+        User user2 = new User("DeuxiÃ¨me", "Test", "test2", "T35T");
         userService.addUser(user1);
         userService.addUser(user2);
         when(userRepositoryMock.getUsernamesLike("Test")).thenReturn(Arrays.asList("test1", "test2"));
