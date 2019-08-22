@@ -6,5 +6,4 @@ so it could easily run on a Tomcat by just deploying the war in the webapps dire
 On the architecture side, it uses a service which uses itself a repository to be able to interact with the database.
 The service itself is used by the RestController, exposing in this example every method of the service.
 
-For testing, we have basic integration tests making queries to the database (which is not a good idea), and unit testing
-with a H2 database, as well as testing with mocked repositories.
+Unit testing with a H2 database, as well as testing with mocked repositories.
