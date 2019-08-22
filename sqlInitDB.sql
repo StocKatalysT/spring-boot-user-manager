@@ -19,8 +19,9 @@ ENGINE=INNODB;
 SELECT * FROM USERS;
 
 INSERT INTO USERS(name, first_name, username, password) VALUES ('StocKa', 'Jim', 'StocKa', 'password1');
-INSERT INTO USERS(name, first_name, username, password) VALUES ('Shinigota', 'Benjamin', 'Shinigota', 'password2');
-INSERT INTO USERS(name, first_name, username, password) VALUES ('Tweedz', 'Maxime', 'Tweedz', 'password3');
+INSERT INTO USERS(name, first_name, username, password) VALUES ('Bedouille', 'Rudi', 'Bedouille', 'password2');
+INSERT INTO USERS(name, first_name, username, password) VALUES ('Shinigota', 'Benjamin', 'Shinigota', 'password3');
+INSERT INTO USERS(name, first_name, username, password) VALUES ('Tweedz', 'Maxime', 'Tweedz', 'password4');
 COMMIT;
 
 SELECT * FROM USERS;
