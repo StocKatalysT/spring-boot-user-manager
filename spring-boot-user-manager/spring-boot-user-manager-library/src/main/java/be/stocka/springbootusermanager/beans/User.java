@@ -1,4 +1,4 @@
-package be.jimve.springbootusermanager.beans;
+package be.stocka.springbootusermanager.beans;
 
 import javax.persistence.*;
 

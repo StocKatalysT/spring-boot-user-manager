@@ -1,6 +1,6 @@
-package be.jimve.springbootusermanager.services;
+package be.stocka.springbootusermanager.services;
 
-import be.jimve.springbootusermanager.beans.User;
+import be.stocka.springbootusermanager.beans.User;
 
 import java.util.List;
 

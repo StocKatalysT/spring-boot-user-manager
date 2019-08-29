@@ -1,7 +1,7 @@
-package be.jimve.springbootusermanager.ws;
+package be.stocka.springbootusermanager.ws;
 
-import be.jimve.springbootusermanager.beans.User;
-import be.jimve.springbootusermanager.services.UserService;
+import be.stocka.springbootusermanager.beans.User;
+import be.stocka.springbootusermanager.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

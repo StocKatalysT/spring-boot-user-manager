@@ -1,7 +1,7 @@
-package be.jimve.springbootusermanager.services;
+package be.stocka.springbootusermanager.services;
 
-import be.jimve.springbootusermanager.beans.User;
-import be.jimve.springbootusermanager.repositories.UserRepository;
+import be.stocka.springbootusermanager.beans.User;
+import be.stocka.springbootusermanager.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

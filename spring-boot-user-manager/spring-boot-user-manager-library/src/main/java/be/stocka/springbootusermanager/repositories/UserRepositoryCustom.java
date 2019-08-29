@@ -1,4 +1,4 @@
-package be.jimve.springbootusermanager.repositories;
+package be.stocka.springbootusermanager.repositories;
 
 import java.util.List;
 

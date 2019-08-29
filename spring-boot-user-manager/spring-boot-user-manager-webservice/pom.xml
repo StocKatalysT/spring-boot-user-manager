@@ -20,7 +20,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.1.7.RELEASE</version>
                 <configuration>
-                    <mainClass>be.jimve.springbootusermanager.ws.Application</mainClass>
+                    <mainClass>be.stocka.springbootusermanager.ws.Application</mainClass>
                 </configuration>
             </plugin>
             <plugin>

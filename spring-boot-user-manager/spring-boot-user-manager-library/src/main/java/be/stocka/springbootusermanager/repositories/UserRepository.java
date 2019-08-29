@@ -1,6 +1,6 @@
-package be.jimve.springbootusermanager.repositories;
+package be.stocka.springbootusermanager.repositories;
 
-import be.jimve.springbootusermanager.beans.User;
+import be.stocka.springbootusermanager.beans.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

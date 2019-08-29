@@ -1,8 +1,8 @@
-package be.jimve.springbootusermanager.tests;
+package be.stocka.springbootusermanager.tests;
 
-import be.jimve.springbootusermanager.beans.User;
-import be.jimve.springbootusermanager.services.UserService;
-import be.jimve.springbootusermanager.ws.Application;
+import be.stocka.springbootusermanager.beans.User;
+import be.stocka.springbootusermanager.services.UserService;
+import be.stocka.springbootusermanager.ws.Application;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

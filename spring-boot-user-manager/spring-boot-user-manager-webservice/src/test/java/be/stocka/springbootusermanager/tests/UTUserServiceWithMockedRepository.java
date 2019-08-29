@@ -1,8 +1,8 @@
-package be.jimve.springbootusermanager.tests;
+package be.stocka.springbootusermanager.tests;
 
-import be.jimve.springbootusermanager.beans.User;
-import be.jimve.springbootusermanager.repositories.UserRepository;
-import be.jimve.springbootusermanager.services.UserServiceImpl;
+import be.stocka.springbootusermanager.beans.User;
+import be.stocka.springbootusermanager.repositories.UserRepository;
+import be.stocka.springbootusermanager.services.UserServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

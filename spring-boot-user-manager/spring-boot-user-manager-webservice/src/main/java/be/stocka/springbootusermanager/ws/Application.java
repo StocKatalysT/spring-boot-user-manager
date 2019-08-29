@@ -1,4 +1,4 @@
-package be.jimve.springbootusermanager.ws;
+package be.stocka.springbootusermanager.ws;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,9 +9,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "be.jimve.springbootusermanager.repositories")
-@ComponentScan(basePackages = {"be.jimve.springbootusermanager.services", "be.jimve.springbootusermanager.ws"})
-@EntityScan(basePackages = "be.jimve.springbootusermanager.beans") // Our entities will be defined in the beans package*/
+@EnableJpaRepositories(basePackages = "be.stocka.springbootusermanager.repositories")
+@ComponentScan(basePackages = {"be.stocka.springbootusermanager.services", "be.stocka.springbootusermanager.ws"})
+@EntityScan(basePackages = "be.stocka.springbootusermanager.beans") // Our entities will be defined in the beans package*/
 public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
