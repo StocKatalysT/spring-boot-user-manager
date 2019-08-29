@@ -1,5 +1,6 @@
 package be.stocka.springbootusermanager.ws;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -19,5 +20,13 @@ public class Logger {
     @After(value = "execution(public java.util.List<be.stocka.springbootusermanager.beans.User> getUsers())")
     public void logAfterGetUsers() {
         LOGGER.info("After getUsers called");
+    }
+
+    @Before(value = "execution(public java.util.List<java.lang.String> getUsernamesLike(java.lang.String))")
+    public void logBeforeGetUsernamesLike(JoinPoint joinPoint) {
+        Object[] arguments = joinPoint.getArgs();
+        for(Object argument : arguments) {
+            LOGGER.info("Search usernames LIKE {}", argument);
+        }
     }
 }
